@@ -1,0 +1,129 @@
+import React from 'react';
+
+function ErrorPage404() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center p-4 overflow-hidden">
+      {/* Animated floating shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-yellow-400 rounded-full animate-float1 opacity-30"></div>
+        <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-teal-400 rounded-full animate-float2 opacity-40"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-pink-500 rounded-full animate-float3 opacity-30"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-28 h-28 bg-indigo-500 rounded-full animate-float4 opacity-20"></div>
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-10 text-center max-w-2xl">
+        {/* Animated 404 text */}
+        <div className="relative">
+          <div className="text-[12rem] md:text-[15rem] font-bold text-white opacity-10 absolute -top-8 left-1/2 transform -translate-x-1/2">
+            404
+          </div>
+          <h1 className="text-9xl font-extrabold text-white mb-4 relative">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 animate-hue-rotate">
+              4
+            </span>
+            <span className="animate-pulse inline-block mx-2">0</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 animate-hue-rotate-reverse">
+              4
+            </span>
+          </h1>
+        </div>
+
+        {/* Animated title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <span className="animate-bounce inline-block">O</span>
+          <span className="animate-bounce inline-block animation-delay-100">o</span>
+          <span className="animate-bounce inline-block animation-delay-200">p</span>
+          <span className="animate-bounce inline-block animation-delay-300">s</span>
+          <span className="mx-2">!</span>
+          Page not found
+        </h2>
+
+        {/* Animated description */}
+        <p className="text-xl text-purple-200 mb-10 max-w-md mx-auto animate-fade-in">
+          The page you're looking for might have been moved or doesn't exist anymore.
+        </p>
+
+        {/* Animated button */}
+        <button className="relative group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold text-white text-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/50 animate-pulse-slow">
+          <span className="relative z-10">Go Back Home</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="absolute -inset-1 bg-white blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+        </button>
+      </div>
+
+
+      {/* Custom animations */}
+
+      <style jsx>{`
+        @keyframes float1 {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(-20px, -30px) rotate(180deg); }
+        }
+        @keyframes float2 {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(15px, 25px) rotate(-90deg); }
+        }
+        @keyframes float3 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(25px, -20px); }
+        }
+        @keyframes float4 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(-30px, 15px); }
+        }
+        @keyframes hue-rotate {
+          0% { filter: hue-rotate(0deg); }
+          100% { filter: hue-rotate(360deg); }
+        }
+        @keyframes hue-rotate-reverse {
+          0% { filter: hue-rotate(360deg); }
+          100% { filter: hue-rotate(0deg); }
+        }
+        @keyframes pulse-slow {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 12s ease-in-out infinite;
+        }
+        .animate-float4 {
+          animation: float4 20s ease-in-out infinite;
+        }
+        .animate-hue-rotate {
+          animation: hue-rotate 8s linear infinite;
+        }
+        .animate-hue-rotate-reverse {
+          animation: hue-rotate-reverse 8s linear infinite;
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
+        .animate-fade-in {
+          animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animation-delay-100 {
+          animation-delay: 0.1s;
+        }
+        .animation-delay-200 {
+          animation-delay: 0.2s;
+        }
+        .animation-delay-300 {
+          animation-delay: 0.3s;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+export default ErrorPage404;

@@ -1,0 +1,99 @@
+Using const, let 
+
+
+In the array
+
+const numbers = [4,3,2,1,5]; 
+
+I can't do numbers = [1,2,3,4,5];
+
+But I can change the index value, I can push like
+
+numbers[1] = 22; 
+
+numbers.push(8,3,2); 
+
+I don't reassign, but I can change.
+-----------------------------------------------------------------------------------------------------
+
+In the object 
+
+
+const student = {
+	
+name : Maharab Hossain Opi,
+class: 12
+
+}
+
+Don't allow reassign, but I can change the value; 
+
+student.name = 'Tamanna islam' ; 
+
+----------------------------------------------------------------------------------------------------------
+
+In the loop 
+
+for ( let i = 0 ; i<10 ; i++){
+
+	......
+}
+
+
+----------------------------------------------------------------------------------------------------------
+
+Set default value in a function
+
+
+function add ( num1 =2 , num2= 4){
+
+	const result = num1 + num2
+	return result; 
+	
+}
+
+if i set value like add(6,7) then both default value will change. If I set 
+any of value like add(7) then first default value will change. If I set 
+no value like add()  then no default value will change. 
+
+
+---------------------------------------------------------------------------------------
+
+Function declaration 
+
+function add ( a , b )
+{
+	return a+b ; 
+}
+
+----------------------------------------------------------------------------------------
+
+Function expression 
+
+const add2 = function(a,b){
+	return a+b; 
+}
+
+
+---------------------------------------------------------------------------------------
+
+Arrow function
+
+const add3 = (a,b) =>  a+b;
+
+const sum = add3 (5,6); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

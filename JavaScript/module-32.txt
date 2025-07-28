@@ -1,0 +1,52 @@
+8 ways to ge undefine
+
+1. variable that is not initialized
+2. fuction with no return.
+3. parameter that is not passed will be undefined
+4. If return has nothin on the right side will return undefined
+5. Property that doesn't exitsts on an object will give you undefined
+6. accessing array elements outside of the index range
+7. deleting an element inside an array
+8. set a value directly to undefine
+---------------------------------------------------------------------------
+
+
+===    dile value + type check kore
+
+==     dile only value check kore.
+
+
+-------------------------------------------------------------------------
+
+Closure
+
+
+fnction stopWatch(){
+	
+	let counter =0 ; 
+	return function(){
+  
+		counter ++; 
+		return counter; 
+	}
+}
+
+const watch1 = stopWatch(); // ekhane watch1 er moddhe stopWatch() er vitorer function ta  dhukbe. 
+
+
+watch1(); // then eivave vitorer function call hobe. 
+
+// eita use korar subidha hoilo vitorer function bairer funtion er sob access korte pare. 
+
+
+
+
+
+
+
+
+
+
+
+
+

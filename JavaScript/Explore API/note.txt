@@ -1,0 +1,66 @@
+1. What is an API ?
+=>An API (Application Programming Interface) is a way for two software programs to talk to each other and share data or functions.
+
+
+2. What are the HTTP methods supported by REST ?
+
+=>The main HTTP methods supported by REST are:
+
+GET – Retrieve data
+
+POST – Create data
+
+PUT – Update data
+
+DELETE – Remove data
+
+PATCH – Partially update data
+
+
+3. Can you use GET request instead of PUT to create a resource ?
+=> No, GET is only for retrieving data. To create a resource, use POST or PUT.
+
+
+4. What is difference between PUT and POST?
+=>  POST creates a new resource.
+PUT creates or replaces a resource at a specific URL.
+
+
+5. What is JSON?
+=> JSON (JavaScript Object Notation) is a lightweight data format used to store and exchange data, easy for humans to read and machines to parse.
+
+6. What is CRUD operations?
+=>CRUD stands for Create, Read, Update, Delete — the four basic operations for managing data in databases or APIs.
+
+7. What is the file extension of JSON?
+=> The file extension of JSON is .json.
+
+8. What are the data types suported by JSON?
+=> JSON supports these data types:
+
+String
+
+Number
+
+Boolean (true/false)
+
+Array
+
+Object
+
+null
+
+9. What is the role of JSON.stringify?
+=> JSON.stringify converts a JavaScript object into a JSON string, so it can be sent or stored easily.
+
+10. Show how to parse a JSON
+=>const jsonString = '{"name":"Opi","age":22}';
+const obj = JSON.parse(jsonString);
+
+console.log(obj.name); // Output: Opi
+
+
+11. Tell me the difference between GET and POST
+=> GET requests data from a server; data is sent in the URL and is visible.
+
+POST sends data to a server to create/update; data is sent in the request body and is not visible in the URL.

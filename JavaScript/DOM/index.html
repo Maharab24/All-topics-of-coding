@@ -1,0 +1,223 @@
+<!--
+DOM = Documant object model
+
+3 things in a DOM
+1. HTML
+2. CSS
+3. JS
+
+Its mainly make a model of HTML
+
+
+In website -> inspect -> console
+
+document.getElementsByTagName('h1')
+
+eta korle tag gula koi koi ase oi line+oi tag er moddhe sob code chole asbe.
+tag gulo array like object hisbe asbe
+
+
+
+
+----------------------------------------
+querySelectorAll
+eitar kaj holo kono ekta class/id er section er moddhe jeita chabo oita joto gula ase sob niye asbe.
+
+id er jonno
+
+document.querySelectorAll('#fruits-title')
+
+ekhane oi section er moddhe joto tag ase sob chole asbe.
+
+class er jonno
+
+document.querySelectorAll('.important-places')
+
+
+
+document.querySelectorAll('.fruits-container li')
+
+eta oi class er under a sob li der dibe
+-------------------------------------------
+querySelector()
+
+eita diye j kono ek tag er jinis ante parbo.
+
+like
+
+document.querySelector('.fruits-container li')
+
+eita dile oi class er moddhe 1st li asbe
+
+
+-------------------------------------------
+in the console of the website
+
+Style :
+
+document.getElementById('fruits-title').style.color='red'
+
+document.getElementById('fruits-title').style.backgroundColor='red'
+
+eivave j kono style deya jay
+
+
+GetAttribute:
+
+kono ekta tag er moddhe id / class / both thakle tader k paoya jay getAttribute diye
+
+const title = document.getElementById('fruits-title')
+title.getAttribute('id')
+
+eita dile sob id gula chole asbe oi attribute er. abr class dile sob class chole asbe
+
+title.classList.remove('name of class')
+
+eivaveo class paoya jay
+
+
+
+SetAttribute:
+
+title.setAttribute('title','tooltip set by JavaScript')
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, hic possimus laborum doloremque eos ut quia odit quasi veniam incidunt est id nihil sed deleniti facere facilis! Voluptas, blanditiis dolorum!</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>My Awesome DOM</h1>
+            <ul>
+                <li>Jalai set</li>
+                <li>OPI</li>
+                <li>Bonobash</li>
+                <li>DOM de re baba</li>
+            </ul>
+        </section>
+
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section id="places-container">
+            <h1 id="places-title">Place I visited</h1>
+            <ul id="places-list">
+                <li class="important-places">Chandpur</li>
+                <li class="important-places">Dhaka</li>
+                <li class="important-places">Borishal</li>
+                <li>Khulna</li>
+            </ul>
+        </section>
+    </main>
+    <!--1st way to connect with js-->
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleInJs.js"></script>
+
+    <!--jei script age thakbe oita age kaj korbe.. design er script age thakle oita age kaj korbe and pore jei section gula add hobe oitar upre apply hobe na. kintu design er script jodi pore dei taile sob oita sob gular uprei kaj korbe-->
+
+
+    <!--2nd way to connect with js-->
+    <script>
+        // console.log('Adding js insiede the html file');
+
+        // const student = {
+        //     name: 'Opi',
+        //     ID: 11,
+        //     study: function (time) {
+        //         console.log(time, 'study kkoro');
+        //     }
+        // }
+
+
+
+
+
+        //call the study function
+        //inspect-->console-->student.study(4)
+
+
+        // const liCollection = document.getElementsByTagName('li');
+
+        // // console.log(liCollection) -> eita dile sob li gula asbe.
+
+        // //other way
+
+        // for (const li of liCollection) {
+        //     console.log(li);
+        //     //eita dile ekta ekta kore sob asbe
+        // }
+
+
+
+        // //-----------------------------------
+
+        // const allHeadings = document.getElementsByTagName('h1');
+
+        // for (const h1 of allHeadings) {
+        //     console.log(h1.innerText);
+        //     //eivave tag er moddher elements gula paoya jay.
+        // }
+
+
+
+        // //find by id
+        // const placeId= document.getElementById('places-title');
+        // //inner elemnts
+        //const placeId2= document.getElementById('places-title').innerText;
+
+    //    const places= document.getElementsByClassName('important-places')
+
+    //    console.log(places)
+
+
+//-----------------------------------------
+    //querySelectorAll
+
+    // const someLi = document.querySelectorAll('.fruits-container li');
+
+    // for(const li of someLi)
+    // {
+    //     console.log(li.innerText);
+    // }
+
+
+    //only qureySelector dile 1st er ta only dibe
+
+
+
+    
+    </script>
+</body>
+
+</html>

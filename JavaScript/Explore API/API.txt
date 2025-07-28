@@ -1,0 +1,6 @@
+Application Programming Interface = API
+
+
+API  is a massenger that takes user request to the server and
+back to the user with services that user need
+

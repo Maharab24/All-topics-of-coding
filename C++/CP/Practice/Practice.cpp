@@ -141,41 +141,19 @@ bool isPrime(int n)
 
 void solve()
 {
-    int n, k;
 
-    cin >> n >> k;
+    int n, l;
+    cin >> n ;
 
     vector<int> a(n);
-
     for (int i = 0; i < n; i++)
-    {
         cin >> a[i];
-    }
 
-    int cnt=0;
-    int ans=0;
-   for(int i=0 ; i<n ; i++)
-   {
-        if(a[i]==0)
-        {
-            cnt++;
-        }
-        else
-        {
-            cnt=0;
-        }
 
-        if(cnt==k)
-        {
-
-            ans++;
-            cnt=0;
-            i++;
-
-        }
-   }
-
-   cout<<ans<<endl;
+    if (n % 2 != 0)
+        cout << a[(n - 1) / 2] << endl;
+    else
+        cout << a[n / 2] << endl;
 }
 
 /*...........solve end...................*/
@@ -189,8 +167,5 @@ int main()
     cin >> t;
 
     while (t--)
-    {
-
         solve();
-    }
 }

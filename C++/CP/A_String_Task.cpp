@@ -12,7 +12,9 @@ using namespace std;
     cout.precision(a);            \
     cout.setf(ios::fixed, ios::floadfield);
 
+
 typedef long long ll;
+
 
 /*..........Debugger..........................*/
 // use opi()...
@@ -141,41 +143,33 @@ bool isPrime(int n)
 
 void solve()
 {
-    int n, k;
 
-    cin >> n >> k;
+    string s;
+    cin>>s;
 
-    vector<int> a(n);
-
-    for (int i = 0; i < n; i++)
+    for(int i=0 ; i<s.size();i++)
     {
-        cin >> a[i];
+        s[i] = tolower(s[i]);
     }
 
-    int cnt=0;
-    int ans=0;
-   for(int i=0 ; i<n ; i++)
-   {
-        if(a[i]==0)
+    string ans;
+
+    for(int i=0 ; i<s.size(); i++)
+    {
+        if(s[i]=='a' || s[i]=='e' ||s[i]=='i' ||s[i]=='o' ||s[i]=='u' || s[i]=='y' )
         {
-            cnt++;
+            continue;
         }
         else
         {
-            cnt=0;
+            ans+='.';
+            ans+=s[i];
         }
 
-        if(cnt==k)
-        {
+    }
 
-            ans++;
-            cnt=0;
-            i++;
+    cout<<ans<<endl;
 
-        }
-   }
-
-   cout<<ans<<endl;
 }
 
 /*...........solve end...................*/
@@ -185,12 +179,7 @@ int main()
 {
     optimize();
 
-    int t;
-    cin >> t;
-
-    while (t--)
-    {
 
         solve();
-    }
+
 }

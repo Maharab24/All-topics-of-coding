@@ -1,7 +1,7 @@
 # To map with real world scenarios, we started using objects in code.
 # This is called object oriented programming.
 
-#For function redundancy decrease and reuseablity increase.
+#For function --> redundancy decrease and reuseablity increase.
 
 
 
@@ -133,4 +133,34 @@ s1 = Student("Opi", 90)
 s1.display()
 
 print(s1.welcome())
+
+
+
+#Static Methods
+
+# Methods that don't use the self parameter (Work at class level)
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    @staticmethod  #decorator
+    def hello():
+        print("Hello")
+
+    def display(self):  # Instance method
+        print(self.name + " has " + str(self.marks) + " marks.")
+
+    def welcome(self):
+        return self.marks
+
+
+"""
+What is decorator?
+--> Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it. 
+    """
+
+
 

@@ -1,56 +1,40 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-bool canSum(int n, vector<int>&a,vector<int>&dp)
+bool canSum(int n, vector<int> &a, vector<int> &dp)
 {
+    if (n == 0) return true;
+    if (n < 0) return false;
 
+   
+    if (dp[n] != -1) return dp[n];
 
-    for(int i=0 ; i<=dp.size(); i++)
+    for (int i = 0; i < a.size(); i++)
     {
-        if(dp[i]==n)
-        return dp[n];
-    }
-
-    if(n==0) return true;
-    if(n<0) return false;
-
-    for(int i=0 ; i < a.size(); i++)
-    {
-        if(canSum(n-a[i],a,dp)==true)
+        if (canSum(n - a[i], a, dp))
         {
-            dp[n]=true;
+            dp[n] = true;
             return true;
         }
-
     }
 
-    dp[n]=false;
-    return false; 
-
-
-
-
+    dp[n] = false;
+    return false;
 }
 
-
-
-
-int main(){
-
-    int n ;
-    cin>>n;
+int main()
+{
+    int n;
+    cin >> n;
 
     int size;
-    cin>>size;
+    cin >> size;
 
-    vector<int>a(size);
-    vector<int>dp(size+3);
+    vector<int> a(size);
+    for (int i = 0; i < size; i++)
+        cin >> a[i];
 
-    for(int i=0 ; i< size ; i++)
-    {
-        cin>>a[i];
-    }
+    vector<int> dp(n + 1, -1); // memo array indexed by n
 
-    cout<<canSum(n,a,dp);
-
+    cout << (canSum(n, a, dp) ? "True" : "False");
 }
